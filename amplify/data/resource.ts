@@ -8,6 +8,13 @@ specify that owners, authenticated via your Auth resource can "create",
 authenticated via an API key, can only "read" records.
 =========================================================================*/
 const schema = a.schema({
+  Vehicle: a
+    .model({
+      vin: a.string(),
+      v_make: a.string(),
+      v_model: a.string(),
+      v_model_year: a.integer(),
+    }),
   Todo: a
     .model({
       content: a.string(),
