@@ -8,13 +8,6 @@ specify that owners, authenticated via your Auth resource can "create",
 authenticated via an API key, can only "read" records.
 =========================================================================*/
 const schema = a.schema({
-  Vehicle: a
-    .model({
-      vin: a.string(),
-      v_make: a.string(),
-      v_model: a.string(),
-      v_model_year: a.integer(),
-    }),
   Todo: a
     .model({
       content: a.string(),
@@ -50,7 +43,7 @@ cases: https://docs.amplify.aws/gen2/build-a-backend/data/connect-to-API/
 import { generateClient } from "aws-amplify/data";
 import { type Schema } from "@/amplify/data/resource";
 
-const client = generateClient<Schema>() // use this Data client for CRUDL renpm install @aws-amplify/ui-reactquests
+const client = generateClient<Schema>() // use this Data client for CRUDL requests
 */
 
 /*== STEP 3 ===============================================================
